@@ -78,7 +78,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font);
-  background: linear-gradient(180deg, #1a0a05 0%, #0d0505 100%);
+  background: radial-gradient(circle at top center, #ff5555 0%, #a40000 28%, #4b0000 58%, #120000 100%);
   color: var(--text);
   overflow-x: hidden;
 }
@@ -89,58 +89,55 @@ body {
   z-index: -3;
   pointer-events: none;
   overflow: hidden;
+  background: radial-gradient(circle at 20% 15%, rgba(255, 204, 0, 0.54), transparent 18%),
+              radial-gradient(circle at 80% 30%, rgba(255, 85, 85, 0.22), transparent 28%),
+              radial-gradient(circle at 50% 65%, rgba(255, 204, 0, 0.18), transparent 30%);
 }
 
 .lava-ball {
   position: absolute;
+  top: 0;
+  left: 0;
   border-radius: 45% 55% 52% 48% / 48% 45% 55% 52%;
   transform-origin: center;
   will-change: transform, border-radius, opacity;
   opacity: 0.96;
   mix-blend-mode: lighten;
-  background: radial-gradient(circle at 35% 35%, #ffff88 0%, #ffff44 8%, #ffdd00 16%, #ffcc00 24%, #ff9933 40%, #ff6633 56%, #ff3333 72%, rgba(255, 80, 40, 0.3) 85%, transparent 100%);
-  box-shadow: 0 0 200px rgba(255, 200, 0, 0.4), inset 0 0 80px rgba(255, 255, 100, 0.42);
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #ffdd88 8%, #ffcc00 16%, #ff9933 24%, #ff6633 35%, #ff3333 48%, #ff0000 62%, rgba(255, 85, 85, 0.35) 80%, transparent 100%);
+  box-shadow: 0 0 220px rgba(255, 120, 55, 0.46), inset 0 0 90px rgba(255, 220, 120, 0.4);
   filter: blur(2px);
+  transition: box-shadow 0.2s ease, filter 0.2s ease, transform 0.12s ease;
+}
+
+.lava-ball.collide {
+  box-shadow: 0 0 300px rgba(255, 210, 90, 0.85), inset 0 0 140px rgba(255, 240, 150, 0.65);
+  filter: blur(1.4px) saturate(1.2);
+  border-radius: 38% 62% 42% 58% / 58% 42% 62% 38%;
 }
 
 .lava-ball--1 {
   width: 480px;
   height: 480px;
-  top: -10%;
-  left: 5%;
-  animation: ballMove1 34s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite, ballMorph1 13s ease-in-out infinite alternate;
 }
 
 .lava-ball--2 {
   width: 420px;
   height: 420px;
-  top: -15%;
-  right: 8%;
-  animation: ballMove2 32s cubic-bezier(0.33, 0.66, 0.66, 1) infinite, ballMorph2 12s ease-in-out infinite alternate;
 }
 
 .lava-ball--3 {
   width: 380px;
   height: 380px;
-  bottom: -8%;
-  left: 10%;
-  animation: ballMove3 36s cubic-bezier(0.42, 0.68, 0.58, 0.92) infinite, ballMorph3 14s ease-in-out infinite alternate;
 }
 
 .lava-ball--4 {
   width: 560px;
   height: 560px;
-  bottom: -12%;
-  right: 5%;
-  animation: ballMove4 38s cubic-bezier(0.27, 0.63, 0.48, 0.95) infinite, ballMorph4 15s ease-in-out infinite alternate;
 }
 
 .lava-ball--5 {
   width: 340px;
   height: 340px;
-  top: 35%;
-  left: 45%;
-  animation: ballMove5 40s cubic-bezier(0.35, 0.55, 0.55, 0.95) infinite, ballMorph5 16s ease-in-out infinite alternate;
 }
 
 @keyframes ballMove1 {

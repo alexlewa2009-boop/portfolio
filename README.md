@@ -16,3 +16,20 @@
 - Секции: проекты, услуги, обо мне, контакты
 - Анимации появления при прокрутке
 - Настраиваемая тема
+
+## Развёртывание на GitHub Pages
+
+1. Создайте репозиторий на GitHub.
+2. Добавьте удалённый `origin`:
+   ```bash
+git remote add origin https://github.com/<username>/<repo>.git
+```
+3. Закоммитьте и запушьте изменения:
+   ```bash
+git add .
+git commit -m "Prepare site for GitHub Pages"
+git push -u origin main
+```
+4. В настройках репозитория GitHub Pages выберите ветку `main` и папку `/ (root)`.
+
+> Также добавлен workflow GitHub Actions для автоматической деплойки через Pages.
