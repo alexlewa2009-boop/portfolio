@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио | Твой сайт</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="lava-bg">
+    <span class="lava-ball lava-ball--1"></span>
+    <span class="lava-ball lava-ball--2"></span>
+    <span class="lava-ball lava-ball--3"></span>
+    <span class="lava-ball lava-ball--4"></span>
+    <span class="lava-ball lava-ball--5"></span>
+  </div>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#home">Моё Портфолио</a>
+      <button class="toggle-btn" id="menuToggle" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="navMenu">
+        <a href="#home">Главная</a>
+        <a href="#projects">Проекты</a>
+        <a href="#services">Услуги</a>
+        <a href="#about">Обо мне</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <button class="theme-btn" id="themeToggle">Тема</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero__content">
+        <div>
+          <p class="eyebrow">Сайт-портфолио для твоих проектов</p>
+          <h1>Я создаю современные адаптивные сайты с анимациями.</h1>
+          <p class="hero__text">Гибкая структура, быстрый дизайн и удобный редактируемый код — полностью под твои задачи.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">Мои проекты</a>
+            <a class="button button--secondary" href="#services">Заказать сайт</a>
+          </div>
+        </div>
+        <div class="hero__cards">
+          <article class="feature-card">
+            <h2>Анимации</h2>
+            <p>Плавные переходы и появление элементов на прокрутке.</p>
+          </article>
+          <article class="feature-card">
+            <h2>Редактируемость</h2>
+            <p>Простой HTML/CSS/JS, понятные переменные и структура.</p>
+          </article>
+          <article class="feature-card">
+            <h2>Адаптивность</h2>
+            <p>От мобильных экранов до больших мониторов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container section__inner">
+        <div class="section__header">
+          <p class="eyebrow">Проекты</p>
+          <h2>Последние готовые работы</h2>
+        </div>
+        <div class="grid cards-grid">
+          <article class="project-card reveal">
+            <span class="project-card__tag">Сайт-визитка</span>
+            <h3>Минималистичный лендинг</h3>
+            <p>Лёгкий дизайн для малого бизнеса с быстрым адаптивным интерфейсом.</p>
+          </article>
+          <article class="project-card reveal">
+            <span class="project-card__tag">Интернет-магазин</span>
+            <h3>Каталог товаров</h3>
+            <p>Удобная навигация и карточки товаров с фильтрацией.</p>
+          </article>
+          <article class="project-card reveal">
+            <span class="project-card__tag">Портфолио</span>
+            <h3>Креативная презентация</h3>
+            <p>Стильно оформленный сайт для талантливых специалистов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--accent" id="services">
+      <div class="container section__inner">
+        <div class="section__header">
+          <p class="eyebrow">Услуги</p>
+          <h2>Что я могу предложить</h2>
+        </div>
+        <div class="grid service-grid">
+          <article class="service-card reveal">
+            <h3>Создание сайта</h3>
+            <p>Сайт под ключ: от концепта до запуска. Подходит для любых тем.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>Редизайн</h3>
+            <p>Обновление внешнего вида и улучшение UX для уже существующего проекта.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>Поддержка</h3>
+            <p>Техподдержка, правки и расширения сайта — быстро и удобно.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container section__inner about-grid">
+        <div class="about-text reveal">
+          <p class="eyebrow">Обо мне</p>
+          <h2>Я делаю сайты, которые легко править и приятно показывать.</h2>
+          <p>В коде использованы переменные, сетки и стили, которые можно быстро менять. Добавляй новые секции, меняй тексты, цвета и изображения за пару минут.</p>
+          <ul class="about-list">
+            <li>Чистая структура HTML</li>
+            <li>Настраиваемые переменные CSS</li>
+            <li>Плавные анимации на прокрутке</li>
+          </ul>
+        </div>
+        <div class="about-meta reveal">
+          <div class="about-card">
+            <span>Опыт</span>
+            <strong>3+ проекта</strong>
+          </div>
+          <div class="about-card">
+            <span>Технологии</span>
+            <strong>HTML / CSS / JS</strong>
+          </div>
+          <div class="about-card">
+            <span>Готовность</span>
+            <strong>Быстрый запуск</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="container section__inner contact-grid reveal">
+        <div>
+          <p class="eyebrow">Контакты</p>
+          <h2>Готов обсудить твой следующий проект</h2>
+          <p>Напиши сообщение, и я подготовлю план по дизайну, верстке и запускам.</p>
+        </div>
+        <div class="contact-card">
+          <p>email@example.com</p>
+          <p>+7 900 000-00-00</p>
+          <a class="button button--primary" href="mailto:email@example.com">Написать</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Твоё портфолио. Легко редактируется и расширяется.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
