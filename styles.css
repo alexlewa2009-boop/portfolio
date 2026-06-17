@@ -78,7 +78,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font);
-  background: #04050d url('video_frame.png') center / cover fixed no-repeat;
+  background: #020403 url('star-background.jpg') center / cover fixed no-repeat;
   color: var(--text);
   overflow-x: hidden;
 }
@@ -90,18 +90,6 @@ body::before {
   z-index: -10;
   pointer-events: none;
   background-color: #04050d;
-}
-
-#bg-video {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -20;
-  pointer-events: none;
-  opacity: 0.95;
-  filter: brightness(0.9);
 }
 
 #stars-background {
