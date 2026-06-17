@@ -10,13 +10,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="lava-bg">
-    <span class="lava-ball lava-ball--1"></span>
-    <span class="lava-ball lava-ball--2"></span>
-    <span class="lava-ball lava-ball--3"></span>
-    <span class="lava-ball lava-ball--4"></span>
-    <span class="lava-ball lava-ball--5"></span>
-  </div>
+  <video id="bg-video" autoplay muted loop playsinline preload="metadata" poster="video_frame.png">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <div id="stars-background"></div>
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#home">Моё Портфолио</a>
@@ -38,9 +35,9 @@
     <section class="hero section" id="home">
       <div class="container hero__content">
         <div>
-          <p class="eyebrow">Сайт-портфолио для твоих проектов</p>
+          <p class="eyebrow">ГЛАВНАЯ</p>
           <h1>Я создаю современные адаптивные сайты с анимациями.</h1>
-          <p class="hero__text">Гибкая структура, быстрый дизайн и удобный редактируемый код — полностью под твои задачи.</p>
+          <p class="hero__text">Гибкая структура, быстрый дизайн и удобный редактируемый код.</p>
           <div class="hero__actions">
             <a class="button button--primary" href="#projects">Мои проекты</a>
             <a class="button button--secondary" href="#services">Заказать сайт</a>
@@ -89,7 +86,7 @@
       </div>
     </section>
 
-    <section class="section section--accent" id="services">
+    <section class="section" id="services">
       <div class="container section__inner">
         <div class="section__header">
           <p class="eyebrow">Услуги</p>
