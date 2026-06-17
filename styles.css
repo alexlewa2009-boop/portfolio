@@ -78,72 +78,19 @@ html {
 body {
   margin: 0;
   font-family: var(--font);
-  background: #020403 url('star-background.jpg') center / cover fixed no-repeat;
+  background: #020403;
   color: var(--text);
+  isolation: isolate;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
-body::before {
-  content: '';
+.page-background {
   position: fixed;
   inset: 0;
-  z-index: -10;
+  z-index: -2;
   pointer-events: none;
-  background-color: #04050d;
-}
-
-#stars-background {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.star {
-  position: fixed;
-  pointer-events: none;
-  width: 4px;
-  height: 22px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.95) 30%, rgba(170,220,255,1) 55%, rgba(255,255,255,0) 100%);
-  box-shadow:
-    0 0 20px rgba(180,225,255,0.9),
-    0 0 40px rgba(120,190,255,0.7);
-  z-index: 0;
-  filter: drop-shadow(0 0 16px rgba(130,210,255,0.85));
-  transform-origin: center;
-  mix-blend-mode: screen;
-}
-
-.star::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  transform: translateX(-50%);
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.05), rgba(255,255,255,0));
-  filter: blur(3px);
-  opacity: 0.7;
-}
-
-@keyframes space-fly {
-  0% {
-    opacity: 0.4;
-    transform: rotate(var(--angle, 0rad)) translate(0, 0) scale(var(--start-scale, 0.12));
-    filter: blur(1px);
-  }
-  30% {
-    opacity: 0.9;
-    filter: blur(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(var(--angle, 0rad)) translate(calc(var(--sx, 0) * 1), calc(var(--sy, 0) * 1)) scale(1.2);
-    filter: blur(8px);
-  }
+  background: #020403 url('star-background.jpg') center / cover no-repeat;
 }
 
 button,
