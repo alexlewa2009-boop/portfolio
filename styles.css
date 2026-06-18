@@ -142,11 +142,13 @@ body {
   width: 0;
   height: 0;
   background: transparent;
+  border: 0;
   border-top: 0;
   border-left: calc(var(--size) / 2) solid transparent;
   border-right: calc(var(--size) / 2) solid transparent;
   border-bottom: var(--size) solid var(--shape-color);
-  box-shadow: 0 0 34px var(--shape-glow);
+  box-shadow: none;
+  filter: drop-shadow(0 0 18px var(--shape-glow));
 }
 
 .background-burst {
